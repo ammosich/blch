@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="{{url_for('static', filename='abi.js')}}"></script>
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let web3 = new Web3('http://127.0.0.1:7545')
+    let contract_adr = '0x63515c781Eb91f7f5B7f25C210eBBA6B154ecce7'
+    let contract = new web3.eth.Contract(abi, contract_adr)
+    let wallet = ''
+    ethereum.request({method:'eth_requestAccounts'})
+    .then(account=>{
+        wallet = account[0]
+        console.log(account)
+        console.log(wallet)
+    })
+    .catch(error=>{
+        alert(error)
+    })
+</script>
+</body>
+</html>
