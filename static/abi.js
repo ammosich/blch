@@ -132,11 +132,6 @@ let abi = [
 						"internalType": "bool",
 						"name": "exists",
 						"type": "bool"
-					},
-					{
-						"internalType": "uint256[]",
-						"name": "diplomas_ind",
-						"type": "uint256[]"
 					}
 				],
 				"internalType": "struct Diplomas.Student",
@@ -148,3 +143,4 @@ let abi = [
 		"type": "function"
 	}
 ]
+		
